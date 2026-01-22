@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registrasion</title>
 </head>
 
 <body>
-    <div class="login-card">
-        <h4>Login</h4>
+    <div class="Registrasion-card">
+        <h4>Sign In</h4>
+        <div class="input-group">
+            <label for="name" class="input-lable">Name :</label>
+            <input type="text" id="name">
+        </div>
         <div class="input-group">
             <label for="email" class="input-lable">Email :</label>
             <input type="text" id="email">
@@ -18,13 +22,15 @@
             <label for="password" class="input-lable">Password :</label>
             <input type="password" id="password">
         </div>
+        <div class="input-group">
+            <label for="confirm-password" class="input-lable">Confirm Password :</label>
+            <input type="password" id="confirm-password">
+        </div>
         <div class="btn-group">
             <button class="login-btn">SIGN IN</button>
-            <button class="login-btn" onclick="movePage()">SIGN UP</button>
+            <button class="login-btn">SIGN UP</button>
         </div>
     </div>
-    
-    <script src="/Js/login.js"></script>
 </body>
 
 </html>
