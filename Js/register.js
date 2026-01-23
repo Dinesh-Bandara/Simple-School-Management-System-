@@ -19,7 +19,11 @@ function regStudent() {
     .then((json) => {
         document.getElementById("res").innerHTML = json.message
     })
-    .catch((err)=>console.error('error',err))
+    .catch((err)=>{
+        console.error('error',err)
+        document.getElementById("res").innerHTML = "not sign in"
+    })
+    
 
 
 }
