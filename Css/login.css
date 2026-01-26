@@ -1,0 +1,209 @@
+.login-card {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.login-form {
+
+    border-radius: 52% 48% 33% 67%/38% 45% 55% 62%;
+    box-shadow: inset 20px 20px 20px #0000000d, 25px 35px 20px #0000000d, 25px 35px 30px #0000000d,
+        inset -20px -20px 25px #ffffffe6;
+    position: relative;
+    transition: all ease .5s;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 5%;
+        height: 0;
+        padding-bottom: 5%;
+        left: 25%;
+        top: 25%;
+        transform: skew(10deg, 0deg);
+        border-radius: 50%;
+        opacity: 0.5;
+        transition: all ease .5s;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 10%;
+        height: 0;
+        padding-bottom: 10%;
+        left: 15%;
+        transform: skew(10deg, 0deg);
+        border-radius: 50%;
+        opacity: 0.9;
+        transition: all ease .5s;
+
+    }
+
+    &:hover{
+        border-radius: 50%;
+
+        &::before{
+            transform: skew(0deg,0deg) translate(50%,10%);
+        }
+
+        &::after{
+            transform: skew(0deg,0deg) translate(50%,10%);
+        }
+    }
+}
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 60px;
+
+    h4{
+        color: black;
+        margin: 0;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: black;
+    font-weight: 550;
+
+    &::placeholder{
+        font-size: 13px;
+        color: #0000004d;
+    }
+}
+
+.input-group{
+    width: 225px;
+    border-radius: 25px;
+    box-shadow: 15px 15px 10px #0000000d,15px 10px 15px #0000000d;
+    overflow: hidden;
+
+    input{
+        font-size: 16px;
+        padding: 10px 15px;
+        width: 100%;
+        box-shadow: inset 2px 5px 10px #0000001a,inset -2px -5px 10px #fff;
+
+    }
+
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    border: none;
+    background-color: #ff0f5b;
+    width: 100px;
+    padding: 10px;
+    color: white;
+    border-radius: 20px;
+}
+
+/* Layout for the container holding the new buttons */
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px; /* Aligns with the form visually */
+}
+
+/* Apply the Liquid Glass Style */
+.Sign-up,
+.forget-pwd {
+    /* 1. The Organic Shape */
+    border-radius: 52% 48% 33% 67% / 38% 45% 55% 62%;
+    
+    /* 2. The Soft Depth (Shadows) */
+    box-shadow: 
+        inset 10px 10px 10px #0000000d, 
+        15px 15px 10px #0000000d, 
+        15px 10px 15px #0000000d,
+        inset -10px -10px 10px #ffffffe6;
+        
+    position: relative;
+    transition: all ease 0.5s;
+    
+    /* Spacing and Text Styling */
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #444; /* Darker text for contrast */
+}
+
+/* 3. The Glossy Reflections (Highlights) */
+.Sign-up::before,
+.forget-pwd::before {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    left: 25%;
+    top: 20%;
+    opacity: 0.5;
+    transition: all ease 0.5s;
+}
+
+.Sign-up::after,
+.forget-pwd::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    left: 15%;
+    top: 30%;
+    opacity: 0.9;
+    transition: all ease 0.5s;
+}
+
+/* Hover Effects: Rounding the shape and moving reflections */
+.Sign-up:hover,
+.forget-pwd:hover {
+    border-radius: 50%; /* Becomes a perfect circle/oval on hover */
+    color: #000;
+    box-shadow: 
+        inset 5px 5px 10px #0000000d, 
+        10px 10px 10px #0000000d, 
+        inset -5px -5px 10px #ffffffe6;
+}
+
+.Sign-up:hover::before,
+.forget-pwd:hover::before {
+    transform: translate(10px, 10px); /* Moves highlight */
+}
+
+.Sign-up:hover::after,
+.forget-pwd:hover::after {
+    transform: translate(10px, 10px); /* Moves highlight */
+}
